@@ -28,21 +28,18 @@ if(isset($_POST['submit'])){
         }
     }
 
-
 ?>
 
     <div class="content">
         <div class="logo">
-
                 <p id="n">Nama Toko</p>
-                <p id="c">&copy;</p>
-        
+                <p id="c">&copy;</p>     
         </div>
         <div class="login">
             <h1>Login</h1>
             <form action="#" method="POST">
-                <input type="text" id="name" name="username" placeholder="username" oninvalid="this.setCustomValidity('Username Gaboleh Kosong')" required>
-                <input type="password" name="password" id="password" placeholder="*******" oninvalid="this.setCustomValidity('Password juga Gaboleh Kosong')" required>
+                <input type="text" id="name" name="username" placeholder="Username" oninvalid="this.setCustomValidity('Username Gaboleh Kosong')" required>
+                <input type="password" name="password" id="password" placeholder="Password" oninvalid="this.setCustomValidity('Password juga Gaboleh Kosong')" required>
                 <p><button type="submit" formmethod="POST" name="submit" formaction="#">Login</button></p>
             </form>
         </div>

@@ -13,6 +13,73 @@
     
 </head>
 
+<?php
+    if(isset($_GET['isused'])){
+        $isused = $_GET['isused'];
+
+        if($isused === 'yes'){
+            echo "<script>alert('email atau username sudah digunakan');</script>";
+        } else {
+
+        }
+
+    } else {
+        $isused = '';
+    }
+
+    if(isset($_GET['message'])){
+        $message = $_GET['message'];
+
+        if($message === 'succes'){
+            echo "<script>alert('user baru telah ditambahkan!');</script>";
+        } else {
+            echo "<script>alert('something wrong!');</script>";
+        }
+
+    } else {
+        $message = '';
+    }
+
+    if(isset($_GET['valid'])){
+        $valid = $_GET['valid'];
+
+        if($valid === 'no'){
+            echo "<script>alert('Yang anda upload bukan Gambar');</script>";
+        } else {
+
+        }
+
+    } else {
+        $valid = '';
+    }
+
+    if(isset($_GET['size'])){
+        $size = $_GET['size'];
+
+        if($size === 'over'){
+            echo "<script>alert('ukuran gambar terlalu besar maksimal 1 mb');</script>";
+        } else {
+
+        }
+
+    } else {
+        $size = '';
+    }
+    
+    if(isset($_GET['confirm'])){
+        $confirm = $_GET['confirm'];
+
+        if($confirm === 'false'){
+            echo "<script>alert('password konfirmasi tidak cocok');</script>";
+        } else {
+
+        }
+
+    } else {
+        $confirm = '';
+    }
+?>
+
 <body class="h-100">
     
     <!--*******************
@@ -43,22 +110,25 @@
                                 
                                     <a class="text-center" href="index.html"> <h4>Daftar Akun!</h4></a>
         
-                                <form action="function_login.php" class="mt-5 mb-5 login-input">
+                                <form action="functionReg.php" method="POST" class="mt-5 mb-5 login-input" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="Name" name="nama" required>
+                                        <input type="text" class="form-control"  placeholder="Nama Lengkap" name="nama" required>
                                     </div>
                                     <div class="form-group">
                                         <select class="form-control custom-select" name="jk">
                                             <option selected>Jenis Kelamin</option>
-                                            <option value="1">Laki-laki</option>
-                                            <option value="2">Perempuan</option>
+                                            <option value="1" name="lk">Laki-laki</option>
+                                            <option value="2" name="pr">Perempuan</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control"  placeholder="Email" name="email" required>
+                                        <input type="text-area" class="form-control"  placeholder="Alamat" name="alamat" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="Username" name="username" required>
+                                        <input type="text" class="form-control"  placeholder="No Handphone" name="nohp  " required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Email/Username" name="email" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password" name="password" required>
@@ -66,9 +136,15 @@
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Konfirmasi Password" name="password2" required>
                                     </div>
+                                    <div class="input-group mb-3">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih file gambar...</label>
+                                        </div>
+                                    </div>
                                     <button class="btn login-form__btn submit w-100" name="daftar">Daftar</button>
                                 </form>
-                                    <p class="mt-5 login-form__footer">Have account <a href="page-login.html" class="text-primary">Sign Up </a> now</p>
+                                    <p class="mt-5 login-form__footer">Sudah punya akun? <a href="page-login.html" class="text-primary">Sign Up </a> sekarang</p>
                                     </p>
                                 </div>
                             </div>
