@@ -41,19 +41,32 @@
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
                                 
-                                    <a class="text-center" href="index.html"> <h4>Rosella</h4></a>
+                                    <a class="text-center" href="index.html"> <h4>Daftar Akun!</h4></a>
         
-                                <form class="mt-5 mb-5 login-input">
+                                <form action="function_login.php" class="mt-5 mb-5 login-input">
                                     <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="Name" required>
+                                        <input type="text" class="form-control"  placeholder="Name" name="nama" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control"  placeholder="Email" required>
+                                        <select class="form-control custom-select" name="jk">
+                                            <option selected>Jenis Kelamin</option>
+                                            <option value="1">Laki-laki</option>
+                                            <option value="2">Perempuan</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" required>
+                                        <input type="email" class="form-control"  placeholder="Email" name="email" required>
                                     </div>
-                                    <button class="btn login-form__btn submit w-100">Sign in</button>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Username" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Konfirmasi Password" name="password2" required>
+                                    </div>
+                                    <button class="btn login-form__btn submit w-100" name="daftar">Daftar</button>
                                 </form>
                                     <p class="mt-5 login-form__footer">Have account <a href="page-login.html" class="text-primary">Sign Up </a> now</p>
                                     </p>
