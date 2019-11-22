@@ -12,7 +12,7 @@
 
     if(isset($_POST['daftar'])) {
         if($sql) > 0) {
-            header("Location: page_register.php");
+            header("Location: page_register.php?");
         }
     }
 ?>
