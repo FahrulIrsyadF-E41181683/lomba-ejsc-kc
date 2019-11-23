@@ -29,6 +29,8 @@
                                                 <th>Jenis Kelamin</th>
                                                 <th>Foto Profil</th>
                                                 <th>Tanggal Daftar</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -46,6 +48,8 @@
                                                 <td><?php echo $data['jenis_kelamin']; ?></td>
                                                 <td><?php echo $data['foto_profil']; ?></td>
                                                 <td><?php echo $data['tanggal_daftar']; ?></td>
+                                                <td><?php echo $data['username']; ?></td>
+                                                <td><?php echo $data['password']; ?></td>
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
@@ -55,7 +59,7 @@
                                                         </button> 
                                                         </a>
                                                         &nbsp;
-                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hapus">
                                                         <button type="button" class="btn btn-danger">
                                                             <i class="fa fa-close color-danger"></i>
                                                         </button> 
@@ -67,12 +71,17 @@
                                         <?php } ?>
                                         </tbody>
                                         <tfoot>
-                                            <tr>
-                                                <th>ID PAKET</th>
-                                                <th>NAMA PAKET</th>
-                                                <th>HARGA</th>
-                                                <th>RINCIAN</th>
-                                                <th>ACTION</th>
+                                        <tr>
+                                                <th>ID Admin</th>
+                                                <th>Nama Admin</th>
+                                                <th>Alamat</th>
+                                                <th>No HP</th>
+                                                <th>Jenis Kelamin</th>
+                                                <th>Foto Profil</th>
+                                                <th>Tanggal Daftar</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
+                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>
