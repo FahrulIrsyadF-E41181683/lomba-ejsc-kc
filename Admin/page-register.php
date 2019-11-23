@@ -125,7 +125,7 @@
                                         <input type="text-area" class="form-control"  placeholder="Alamat" name="alamat" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="No Handphone" name="nohp  " required>
+                                        <input type="text" class="form-control"  placeholder="No Handphone" name="nohp" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control"  placeholder="Email/Username" name="email" required>

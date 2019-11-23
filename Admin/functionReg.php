@@ -25,7 +25,7 @@
             header("Location: page-register.php?confirm=false");
         } else {
             $password = password_hash($password, PASSWORD_BCRYPT);
-            $insert_db = "INSERT INTO tabel_admin VALUES('$id_admin','$nama','$jeniskelamin','$alamat','$nohp','$email','','$password','0','$foto','$tanggal')";
+            $insert_db = "INSERT INTO tabel_admin (`id_admin`, `nama_admin`, `jenis_kelamin`, `alamat`, `no_hp`, `username`, `password`) VALUES('$id_admin','$nama','$jeniskelamin','$alamat','$nohp','$email','$password')";
             
             $var = mysqli_query($connect, $insert_db);
             if($var == true){

@@ -4,11 +4,10 @@
                         <div class="card">
                             <div class="card-body">
                             
-                                
                                 <div class="table-responsive">
                                 <div class="col-sm-12">
                                         <div class="col-sm-12 col-md-6">
-                                          <label>
+                                            <label>
                                                 <h4>Data Paket</h4>
                                             </label>
                                         </div>
@@ -23,24 +22,30 @@
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>
                                             <tr>
-                                                <th>ID PAKET</th>
-                                                <th>NAMA PAKET</th>
-                                                <th>HARGA</th>
-                                                <th>RINCIAN</th>
+                                                <th>ID Admin</th>
+                                                <th>Nama Admin</th>
+                                                <th>Alamat</th>
+                                                <th>No HP</th>
+                                                <th>Jenis Kelamin</th>
+                                                <th>Foto Profil</th>
+                                                <th>Tanggal Daftar</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $query = "Select * from paket";
+                                        $query = "Select * from tabel_admin";
                                         $sql = mysqli_query($connect, $query);
                                         while($data = mysqli_fetch_array($sql)){
                                         ?>
                                             <tr>
-                                                <td><?php echo $data['ID_PKT']; ?></td>
-                                                <td><?php echo $data['NM_PKT']; ?></td>
-                                                <td><?php echo $data['HARGA']; ?></td>
-                                                <td><?php echo $data['RINCIAN']; ?></td>
+                                                <td><?php echo $data['id_admin']; ?></td>
+                                                <td><?php echo $data['nama_admin']; ?></td>
+                                                <td><?php echo $data['alamat']; ?></td>
+                                                <td><?php echo $data['no_hp']; ?></td>
+                                                <td><?php echo $data['jenis_kelamin']; ?></td>
+                                                <td><?php echo $data['foto_profil']; ?></td>
+                                                <td><?php echo $data['tanggal_daftar']; ?></td>
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
