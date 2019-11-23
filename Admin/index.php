@@ -15,6 +15,7 @@ $row3     = mysqli_fetch_array($jmlp);
 $sum      = $row['total'];
 $jmltr    = $row2['jmlt'];
 $jmlcs    = $row3['jmlp'];
+$now = date_create('now')->format('Y-m-d');
  
 if ($username == "" || $username == NULL || empty($username)) { 
 
@@ -295,7 +296,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                             <i class="icon-note menu-icon"></i><span class="nav-text">Forms</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="?page=paket">Paket</a></li>
+                            <li><a href="?page=paket">Admin</a></li>
                             <li><a href="./table-datatable.html">Pegawai</a></li>
                             <li><a href="./table-datatable.html">Wisata</a></li>
                             <li><a href="./table-datatable.html">Customer</a></li>
@@ -322,7 +323,7 @@ if ($username == "" || $username == NULL || empty($username)) {
 				include "_index.php";
 				break;
 			case 'paket':
-				include "./_paket.php";
+				include "./_admin.php";
 				break;
 			case 'galeri':
 				include "drink.php";
@@ -346,7 +347,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                 include "makanan/formeditgaleri.php";
                 break;
 			default:
-				include "./_index.php";
+				include "./_admin.php";
 				break;
 		}}
 	 ?>
