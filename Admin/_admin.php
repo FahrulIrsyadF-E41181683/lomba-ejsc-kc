@@ -112,7 +112,7 @@
                                                                 </div>
                                                                 </div>
                                                     </div>
-                                                </div>
+                                                
                                                     <div class="modal-footer">
                                                             <input type="reset" class="btn btn-secondary" value="Reset" style="color:white;">
                                                             <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
@@ -122,7 +122,7 @@
                                                 </div>
                                           </div>  
 
-
+                                </div>
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>
                                             <tr>
