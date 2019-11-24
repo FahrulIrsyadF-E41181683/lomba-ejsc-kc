@@ -8,7 +8,7 @@
                                 <div class="col-sm-12">
                                         <div class="col-sm-12 col-md-6">
                                             <label>
-                                                <h4>Data Paket</h4>
+                                                <h4>Data Admin</h4>
                                             </label>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
@@ -131,6 +131,8 @@
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
                                                 <th>Jenis Kelamin</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
                                                 <th>Foto Profil</th>
                                                 <th>Tanggal Daftar</th>
                                                 <th>Action</th>
@@ -150,6 +152,8 @@
                                                 <td><?php echo $data['alamat']; ?></td>
                                                 <td><?php echo $data['no_hp']; ?></td>
                                                 <td><?php echo $data['jenis_kelamin']; ?></td>
+                                                <td><?php echo $data['username']; ?></td>
+                                                <td><?php echo $data['password']; ?></td>
                                                 <td><img alt="" class="" width="100" src="images/avatar/<?php echo $data['foto_profil']; ?>"></td>
                                                 <td><?php echo $data['tanggal_daftar']; ?></td>
                                                 <td>
@@ -179,6 +183,8 @@
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
                                                 <th>Jenis Kelamin</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
                                                 <th>Foto Profil</th>
                                                 <th>Tanggal Daftar</th>
                                                 <th>Action</th>

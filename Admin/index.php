@@ -300,7 +300,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                             <li><a href="?page=paket">Admin</a></li>
                             <li><a href="?page=produk">Produk</a></li>
                             <li><a href="./table-datatable.html">Pegawai</a></li>
-                            <li><a href="./table-datatable.html">Wisata</a></li>
+                            <li><a href="./suplier.php">Suplier</a></li>
                             <li><a href="./table-datatable.html">Customer</a></li>
                             <li><a href="./table-datatable.html">Hotel</a></li>
                         </ul>
