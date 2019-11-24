@@ -299,7 +299,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                         <ul aria-expanded="false">
                             <li><a href="?page=paket">Admin</a></li>
                             <li><a href="./table-datatable.html">Pegawai</a></li>
-                            <li><a href="./suplier.php">Suplier</a></li>
+                            <li><a href="?page=suplier">Suplier</a></li>
                             <li><a href="./table-datatable.html">Customer</a></li>
                             <li><a href="./table-datatable.html">Hotel</a></li>
                         </ul>
@@ -325,7 +325,10 @@ if ($username == "" || $username == NULL || empty($username)) {
 				break;
 			case 'paket':
 				include "./_admin.php";
-				break;
+                break;
+            case 'suplier':
+                include "./_suplier.php";
+                break;
 			case 'galeri':
 				include "drink.php";
 				break;
