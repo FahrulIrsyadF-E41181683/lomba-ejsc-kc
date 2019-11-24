@@ -8,7 +8,7 @@
                                 <div class="col-sm-12">
                                         <div class="col-sm-12 col-md-6">
                                             <label>
-                                                <h4>Data Admin</h4>
+                                                <h4>Data Produk </h4>
                                             </label>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
@@ -25,33 +25,22 @@
                                                             </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                            <form  method="post" action="_tambah_admin.php" enctype="multipart/form-data"> 
+                                                            <form  method="post" action="_tambah_produk.php" enctype="multipart/form-data"> 
                                                                 <div class="row">
                                                                 <div class="form-group col col-md-6 ml-auto">
-                                                                    <label class="col-form-label">Nama Admin</label>
-                                                                    <input type="text" name="nm_admin" class="form-control input-default" placeholder="Nama Admin">
-                                                                    <label class="col-form-label">Jenis Kelamin</label>
-                                                                    <select class="form-control" name="jenis_kelamin" id="sel1">
-                                                                        <option>Laki-Laki</option>
-                                                                        <option>Perempuan</option>
-                                                                    </select>
-                                                                    <label class="col-form-label">Alamat</label>
-                                                                    <textarea type="text" name="alamat" class="form-control input-default" placeholder="Alamat" style="height:125px;"></textarea>
-                                                                    <label class="col-form-label">No Hp</label>
-                                                                    <input type="text" name="no_hp" class="form-control input-default" maxlength="13" 
-                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp">
+                                                                    <label class="col-form-label">Nama Produk</label>
+                                                                    <input type="text" name="nm_prd" class="form-control input-default" placeholder="Nama Produk">
+                                                                    <label class="col-form-label">Stok</label>
+                                                                    <input type="text" name="stk" class="form-control input-default" placeholder="Stok">
+                                                                    <label class="col-form-label">Harga</label>
+                                                                    <input type="text" name="hrg" class="form-control input-default" placeholder="Harga" maxlength="11"
+                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                                                                 </div>
                                                                 <div class="form-group col col-md-6 ml-auto">
-                                                                    <label class="col-form-label">Email</label>
-                                                                    <input type="email" name="email" class="form-control input-default" placeholder="Email">
-                                                                    <label class="col-form-label">Username</label>
-                                                                    <input type="text" name="username" class="form-control input-default" placeholder="Username">
-                                                                    <label class="col-form-label">Password</label>
-                                                                    <input type="password" name="password" class="form-control input-default" placeholder="Password">
-                                                                    <label class="col-form-label">Foto Profil</label>
-                                                                    <input type="file" name="foto" class="form-control input-default">    
-                                                                    <label class="col-form-label">Tanggal</label>
-                                                                    <input type="date" name="tanggal" readonly class="form-control input-default" value="<?php echo $now?>" >           
+                                                                    <label class="col-form-label">Foto Produk</label>
+                                                                    <input type="file" name="fotoprd" class="form-control input-default">    
+                                                                    <label class="col-form-label">Tanggal Input</label>
+                                                                    <input type="date" name="tglin" readonly class="form-control input-default" value="<?php echo $now?>" >           
                                                                 </div>
                                                                 </div>
                                                     </div>
@@ -77,31 +66,24 @@
                                                             </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                            <form  method="post" action="_tambah_admin.php" enctype="multipart/form-data"> 
+                                                    <form  method="post" action="_tambah_produk.php" enctype="multipart/form-data"> 
                                                                 <div class="row">
                                                                 <div class="form-group col col-md-6 ml-auto">
-                                                                    <label class="col-form-label">Nama Admin</label>
-                                                                    <input type="text" name="nm_admin" class="form-control input-default" placeholder="Nama Admin">
-                                                                    <label class="col-form-label">Jenis Kelamin</label>
-                                                                    <select class="form-control" name="jenis_kelamin" id="sel1">
-                                                                        <option>Laki-Laki</option>
-                                                                        <option>Perempuan</option>
-                                                                    </select>
-                                                                    <label class="col-form-label">Alamat</label>
-                                                                    <textarea type="text" name="alamat" class="form-control input-default" placeholder="Alamat" style="height:184px;"></textarea>
-                                                                    <label class="col-form-label">No Hp</label>
-                                                                    <input type="text" name="no_hp" class="form-control input-default" maxlength="13" 
-                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp">
+                                                                    <label class="col-form-label">Nama Produk</label>
+                                                                    <input type="text" name="nm_prd" class="form-control input-default" placeholder="Nama Produk">
+                                                                    <label class="col-form-label">Stok</label>
+                                                                    <input type="text" name="stk" class="form-control input-default" placeholder="Stok">
+                                                                    <label class="col-form-label">Harga</label>
+                                                                    <input type="text" name="hrg" class="form-control input-default" placeholder="Harga" maxlength="11"
+                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                                                                 </div>
                                                                 <div class="form-group col col-md-6 ml-auto">
-                                                                    <label class="col-form-label">Email</label>
-                                                                    <input type="email" name="email" class="form-control input-default" placeholder="Email">
-                                                                    <label class="col-form-label">Username</label>
-                                                                    <input type="text" name="username" class="form-control input-default" placeholder="Username">
-                                                                    <label class="col-form-label">Password</label>
-                                                                    <input type="password" name="password" class="form-control input-default" placeholder="Password">
-                                                                    <label class="col-form-label">Foto Profil</label>
-                                                                    <input type="file" name="foto" class="form-control input-default">
+                                                                    <label class="col-form-label">Foto Produk</label>
+                                                                    <input type="file" name="fotoprd" class="form-control input-default">    
+                                                                    <label class="col-form-label">Tanggal Input</label>
+                                                                    <input type="date" name="tglin" readonly class="form-control input-default" value="<?php echo $now?>" >           
+                                                                </div>
+                                                                </div>
                                                                     <label for=""></label>
                                                                     <div class="form-check mb-3">
                                                                      <label class="form-check-label">
@@ -126,36 +108,30 @@
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>
                                             <tr>
-                                                <th>ID Admin</th>
-                                                <th>Nama Admin</th>
-                                                <th>Alamat</th>
-                                                <th>No HP</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Username</th>
-                                                <th>Password</th>
-                                                <th>Foto Profil</th>
-                                                <th>Tanggal Daftar</th>
+                                                <th>ID Produk</th>
+                                                <th>Nama Produk</th>
+                                                <th>Stok</th>
+                                                <th>Harga Produk</th>
+                                                <th>Foto Produk</th>
+                                                <th>Tanggal Input</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <?php
                                         $id = $_GET['id'];
-                                        $query = "Select * from tabel_admin";
-                                        $query1 = "Select * from tabel_admin where id_admin='".$id."'";
+                                        $query = "Select * from tabel_produk";
+                                        $query1 = "Select * from tabel_produk where id_produk='".$id."'";
                                         $sql = mysqli_query($connect, $query);
                                         while($data = mysqli_fetch_array($sql)){
                                         ?>
                                             <tr>
-                                                <td><?php echo $data['id_admin']; ?></td>
-                                                <td><?php echo $data['nama_admin']; ?></td>
-                                                <td><?php echo $data['alamat']; ?></td>
-                                                <td><?php echo $data['no_hp']; ?></td>
-                                                <td><?php echo $data['jenis_kelamin']; ?></td>
-                                                <td><?php echo $data['username']; ?></td>
-                                                <td><?php echo $data['password']; ?></td>
-                                                <td><img alt="" class="" width="100" src="images/avatar/<?php echo $data['foto_profil']; ?>"></td>
-                                                <td><?php echo $data['tanggal_daftar']; ?></td>
+                                                <td><?php echo $data['id_produk']; ?></td>
+                                                <td><?php echo $data['nama_produk']; ?></td>
+                                                <td><?php echo $data['stok']; ?></td>
+                                                <td><?php echo $data['harga_produk']; ?></td>
+                                                <td><img alt="" class="" width="100" src="images/avatar/<?php echo $data['foto_produk']; ?>"></td>
+                                                <td><?php echo $data['tanggal_input']; ?></td>
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
@@ -165,7 +141,7 @@
                                                         </button> 
                                                         </a>      
                                                         &nbsp;
-                                                        <a href="_hapus_admin.php?id=<?php echo $data['id_admin']; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hapus">
+                                                        <a href="_hapus_produk.php?id=<?php echo $data['id_produk']; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hapus">
                                                         <button type="button" class="btn btn-danger sweet-confirm">
                                                             <i class="fa fa-close color-danger"></i>
                                                         </button> 
@@ -178,15 +154,12 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>ID Admin</th>
-                                                <th>Nama Admin</th>
-                                                <th>Alamat</th>
-                                                <th>No HP</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Username</th>
-                                                <th>Password</th>
-                                                <th>Foto Profil</th>
-                                                <th>Tanggal Daftar</th>
+                                                <th>ID Produk</th>
+                                                <th>Nama Produk</th>
+                                                <th>Stok</th>
+                                                <th>Harga Produk</th>
+                                                <th>Foto Produk</th>
+                                                <th>Tanggal Input</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
