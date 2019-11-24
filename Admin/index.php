@@ -42,6 +42,7 @@ if ($username == "" || $username == NULL || empty($username)) {
     <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <link href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
     <!-- Custom Stylesheet -->
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -407,8 +408,13 @@ if ($username == "" || $username == NULL || empty($username)) {
 
     <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
     <script src="./js/plugins-init/chartjs-init.js"></script>
+    
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
 
     <script src="./js/dashboard/dashboard-1.js"></script>
+
+ 
 
 </body>
 
