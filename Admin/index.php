@@ -298,6 +298,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="?page=paket">Admin</a></li>
+                            <li><a href="?page=produk">Produk</a></li>
                             <li><a href="./table-datatable.html">Pegawai</a></li>
                             <li><a href="./table-datatable.html">Wisata</a></li>
                             <li><a href="./table-datatable.html">Customer</a></li>
@@ -325,7 +326,10 @@ if ($username == "" || $username == NULL || empty($username)) {
 				break;
 			case 'paket':
 				include "./_admin.php";
-				break;
+                break;
+            case 'produk':
+                include "./_produk.php";
+                break;    
 			case 'galeri':
 				include "drink.php";
 				break;
@@ -351,7 +355,7 @@ if ($username == "" || $username == NULL || empty($username)) {
 				include "./_admin.php";
 				break;
 		}}
-	 ?>
+	?>
             <!-- #/ container -->
         </div>
         <!--**********************************
