@@ -35,9 +35,7 @@
                                                                 <div class="form-group col col-md-6 ml-auto">
                                                                     <label class="col-form-label">No Hp</label>
                                                                     <input type="text" name="no_hp" class="form-control input-default" maxlength="13" 
-                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp">
-                                                                    <label class="col-form-label">Foto Profil</label>
-                                                                    <input type="file" name="foto" class="form-control input-default">               
+                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp">             
                                                                 </div>
                                                                 </div>
                                                     </div>
@@ -63,38 +61,16 @@
                                                             </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                            <form  method="post" action="_tambah_admin.php" enctype="multipart/form-data"> 
+                                                            <form  method="post" action="tambah_suplier.php" enctype="multipart/form-data"> 
                                                                 <div class="row">
                                                                 <div class="form-group col col-md-6 ml-auto">
                                                                     <label class="col-form-label">Nama Admin</label>
-                                                                    <input type="text" name="nm_admin" class="form-control input-default" placeholder="Nama Admin">
-                                                                    <label class="col-form-label">Jenis Kelamin</label>
-                                                                    <select class="form-control" name="jenis_kelamin" id="sel1">
-                                                                        <option>Laki-Laki</option>
-                                                                        <option>Perempuan</option>
-                                                                    </select>
+                                                                    <input type="text" name="nm_suplier" class="form-control input-default" placeholder="Nama Admin">
                                                                     <label class="col-form-label">Alamat</label>
                                                                     <textarea type="text" name="alamat" class="form-control input-default" placeholder="Alamat" style="height:184px;"></textarea>
                                                                     <label class="col-form-label">No Hp</label>
                                                                     <input type="text" name="no_hp" class="form-control input-default" maxlength="13" 
                                                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp">
-                                                                </div>
-                                                                <div class="form-group col col-md-6 ml-auto">
-                                                                    <label class="col-form-label">Email</label>
-                                                                    <input type="email" name="email" class="form-control input-default" placeholder="Email">
-                                                                    <label class="col-form-label">Username</label>
-                                                                    <input type="text" name="username" class="form-control input-default" placeholder="Username">
-                                                                    <label class="col-form-label">Password</label>
-                                                                    <input type="text" name="password" class="form-control input-default" placeholder="Password">
-                                                                    <label class="col-form-label">Foto Profil</label>
-                                                                    <input type="file" name="foto" class="form-control input-default">
-                                                                    <label for=""></label>
-                                                                    <div class="form-check mb-3">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" value="">&nbsp; Ceklis jika ingin mengubah foto</label>
-                                                                    </div>
-                                                                    <label class="col-form-label">Tanggal</label>
-                                                                    <input type="date" name="tanggal" readonly class="form-control input-default" value="<?php echo $now?>" >           
                                                                 </div>
                                                                 </div>
                                                     </div>
@@ -116,7 +92,6 @@
                                                 <th>Nama Suplier</th>
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
-                                                <th>Foto Profil</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -132,7 +107,6 @@
                                                 <td><?php echo $data['nama_suplier']; ?></td>
                                                 <td><?php echo $data['alamat']; ?></td>
                                                 <td><?php echo $data['no_hp']; ?></td>
-                                                <td><?php echo $data['foto_profil']; ?></td>
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
@@ -142,7 +116,7 @@
                                                         </button> 
                                                         </a>      
                                                         &nbsp;
-                                                        <a href="_hapus_admin.php?id=<?php echo $data['id_suplier']; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hapus">
+                                                        <a href="_hapus_suplier.php?id=<?php echo $data['id_suplier']; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hapus">
                                                         <button type="button" class="btn btn-danger sweet-confirm">
                                                             <i class="fa fa-close color-danger"></i>
                                                         </button> 
@@ -159,7 +133,6 @@
                                                 <th>Nama Suplier</th>
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
-                                                <th>Foto Profil</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
