@@ -301,7 +301,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                             <li><a href="?page=produk">Produk</a></li>
                             <li><a href="./table-datatable.html">Pegawai</a></li>
                             <li><a href="?page=suplier">Suplier</a></li>
-                            <li><a href="./table-datatable.html">Customer</a></li>
+                            <li><a href="?page=ramal">Peramalan Stok</a></li>
                             <li><a href="./table-datatable.html">Hotel</a></li>
                         </ul>
                     </li>
@@ -330,9 +330,12 @@ if ($username == "" || $username == NULL || empty($username)) {
             case 'suplier':
                 include "./_suplier.php";
                 break;
+            case 'ramal':
+                include "./_ramal_stok.php";
+                break;
             case 'produk':
                 include "./_produk.php";
-                break;    
+                break;
 			case 'galeri':
 				include "drink.php";
 				break;
