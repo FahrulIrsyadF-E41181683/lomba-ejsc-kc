@@ -17,11 +17,11 @@ $jmltr    = $row2['jmlt'];
 $jmlcs    = $row3['jmlp'];
 $now = date_create('now')->format('Y-m-d');
  
-if ($username == "" || $username == NULL || empty($username)) { 
+// if ($username == "" || $username == NULL || empty($username)) { 
 
-    echo "<script>document.location.href='login.php'</script>\n";
+//     echo "<script>document.location.href='login.php'</script>\n";
     
-}else{
+// }else{
 
 ?> 
 
@@ -302,7 +302,7 @@ if ($username == "" || $username == NULL || empty($username)) {
                             <li><a href="./table-datatable.html">Pegawai</a></li>
                             <li><a href="?page=suplier">Suplier</a></li>
                             <li><a href="?page=ramal">Peramalan Stok</a></li>
-                            <li><a href="./table-datatable.html">Hotel</a></li>
+                            <li><a href="?page=laba">Perhitungan Laba</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -335,6 +335,9 @@ if ($username == "" || $username == NULL || empty($username)) {
                 break;
             case 'produk':
                 include "./_produk.php";
+                break;
+            case 'laba':
+                include "./_laba.php";
                 break;
 			case 'galeri':
 				include "drink.php";
@@ -430,4 +433,4 @@ if ($username == "" || $username == NULL || empty($username)) {
 
 </html>
 
-<?php }?>
+<?php ?>

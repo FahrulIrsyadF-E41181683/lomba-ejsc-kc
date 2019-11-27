@@ -16,10 +16,10 @@ $ekstensi = strtolower(end($x));
 $tmp = $_FILES['foto']['tmp_name'];
 $tgl_daftar = $_POST['tanggal'];
 
-$data = mysqli_query($connect, "select id_admin from tabel_admin ORDER BY id_admin DESC LIMIT 1");
+$data = mysqli_query($connect, "select id_admin from admin ORDER BY ID_ADMIN DESC LIMIT 1");
 while($admin_data = mysqli_fetch_array($data))
 {
-    $adm_id = $admin_data['id_admin'];
+    $adm_id = $admin_data['ID_ADMIN'];
 }
 
 $row = mysqli_num_rows($data);
@@ -36,7 +36,7 @@ $path = "images/avatar/".$fotobaru;
 if(in_array($ekstensi, $ekstensi_diperbolehkan) === true | move_uploaded_file($tmp, $path)){ // Cek apakah gambar berhasil diupload atau tidak
   // Proses simpan ke Database
   
-  $sql = mysqli_query($connect, "INSERT INTO `tabel_admin` (`id_admin`, `nama_admin`, `jenis_kelamin`, `alamat`, `no_hp`, `email`, `username`, `password`, `foto_profil`, `tanggal_daftar`) 
+  $sql = mysqli_query($connect, "INSERT INTO `admin` (`id_admin`, `nama_admin`, `jenis_kelamin`, `alamat`, `no_hp`, `email`, `username`, `password`, `foto_profil`, `tanggal_daftar`) 
                                 VALUES ('$id_admin', '$nm_admin', '$jenis_kelamin', '$alamat', '$no_hp', '$email', '$username', '$password', '$fotobaru', '$tgl_daftar');"); // Eksekusi/ Jalankan query dari variabel $query
   if($sql){ // Cek jika proses simpan ke database sukses atau tidak
     // Jika Sukses, Lakukan :

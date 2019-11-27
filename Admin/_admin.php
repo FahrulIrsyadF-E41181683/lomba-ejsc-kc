@@ -130,11 +130,9 @@
                                                 <th>Nama Admin</th>
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
-                                                <th>Jenis Kelamin</th>
                                                 <th>Username</th>
                                                 <th>Password</th>
                                                 <th>Foto Profil</th>
-                                                <th>Tanggal Daftar</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -147,15 +145,13 @@
                                         while($data = mysqli_fetch_array($sql)){
                                         ?>
                                             <tr>
-                                                <td><?php echo $data['id_admin']; ?></td>
+                                                <td><?php echo $data['ID_ADMIN']; ?></td>
                                                 <td><?php echo $data['nama_admin']; ?></td>
                                                 <td><?php echo $data['alamat']; ?></td>
                                                 <td><?php echo $data['no_hp']; ?></td>
-                                                <td><?php echo $data['jenis_kelamin']; ?></td>
                                                 <td><?php echo $data['username']; ?></td>
                                                 <td><?php echo $data['password']; ?></td>
                                                 <td><img alt="" class="" width="100" src="images/avatar/<?php echo $data['foto_profil']; ?>"></td>
-                                                <td><?php echo $data['tanggal_daftar']; ?></td>
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
