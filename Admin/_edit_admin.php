@@ -1,12 +1,14 @@
 <?php
 // Load file koneksi.php
-require_once 'koneksi.php';
+require_once '../koneksi.php';
 // Ambil data NIS yang dikirim oleh form_ubah.php melalui URL
-$id = $_GET['id'];
+$id = $_POST['id'];
 // Ambil Data yang Dikirim dari Form
 $nama = $_POST['nama'];
+$jk   = $_POST['jk'];
 $alamat = $_POST['alamat'];
 $nohp = $_POST['nohp'];
+$email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 // Cek apakah user ingin mengubah fotonya atau tidak
@@ -35,14 +37,14 @@ if(isset($_POST['ubah'])){ // Jika user menceklis checkbox yang ada di form ubah
     $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
       // Jika Sukses, Lakukan :
-      echo "<script>alert('Data Berhasil Disimpan');document.location.href='_admin.php?page=edit'</script>\n"; // Redirect ke halaman admin.php
+      echo "<script>alert('Data Berhasil Disimpan');document.location.href='index.php?page=paket'</script>\n"; // Redirect ke halaman admin.php
     }else{
       // Jika Gagal, Lakukan :
-      echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='_admin.php?page=makanan'</script>\n";
+      echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='index.php?page=paket'</script>\n";
     }
   }else{
     // Jika gambar gagal diupload, Lakukan :
-    echo "<script>alert('Data Gagal Disimpan karena gagal upload foto');document.location.href='_admin.php?page=edit'</script>\n";
+    echo "<script>alert('Data Gagal Disimpan karena gagal upload foto');document.location.href='index.php?page=paket'</script>\n";
   }
 }else{ // Jika user tidak menceklis checkbox yang ada di form ubah, lakukan :
   // Proses ubah data ke Database
@@ -50,10 +52,10 @@ if(isset($_POST['ubah'])){ // Jika user menceklis checkbox yang ada di form ubah
   $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
   if($sql){ // Cek jika proses simpan ke database sukses atau tidak
     // Jika Sukses, Lakukan :
-    echo "<script>alert('Data Berhasil Disimpan');document.location.href='_admin.php?page=edit'</script>\n"; // Redirect ke halaman admin.php
+    echo "<script>alert('Data Berhasil Disimpan');document.location.href='index.php?page=paket'</script>\n"; // Redirect ke halaman admin.php
   }else{
     // Jika Gagal, Lakukan :
-    echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='_admin.php?page=edit'</script>\n";
+    echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='index.php?page=paket'</script>\n";
   }
 }
 ?>
