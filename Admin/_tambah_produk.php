@@ -33,7 +33,7 @@ if(in_array($ekstensi, $ekstensi_diperbolehkan) === true | move_uploaded_file($t
   // Proses simpan ke Database
   
   $sql = mysqli_query($connect, "INSERT INTO `tabel_produk` (`id_produk`, `nama_produk`, `stok`, `harga_produk`, `tanggal_input`, `foto_produk`) 
-                                VALUES ('$id_produk', '$nm_prd', '$stk', '$hrg', '$tglin', '$foto');"); // Eksekusi/ Jalankan query dari variabel $query
+                                VALUES ('$id_produk', '$nm_prd', '$stk', '$hrg', '$tglin', '$fotobaru');"); // Eksekusi/ Jalankan query dari variabel $query
   if($sql){ // Cek jika proses simpan ke database sukses atau tidak
     // Jika Sukses, Lakukan :
       echo "<script>alert('Data Berhasil Disimpan');document.location.href='index.php?page=produk'</script>\n"; // Redirect ke halaman admin.php

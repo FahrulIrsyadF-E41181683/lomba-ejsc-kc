@@ -23,7 +23,7 @@ while($admin_data = mysqli_fetch_array($data))
 }
 
 $row = mysqli_num_rows($data);
-if($row>0){
+if($row > 0){
   $id_admin = autonumber($adm_id, 3, 3);
 }else{
   $id_admin = 'ADM001';

@@ -66,7 +66,7 @@
                                                             </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                    <form  method="post" action="_tambah_produk.php" enctype="multipart/form-data"> 
+                                                    <form  method="post" action="_edit_produk.php" enctype="multipart/form-data"> 
                                                                 <div class="row">
                                                                 <div class="form-group col col-md-6 ml-auto">
                                                                     <label class="col-form-label">Nama Produk</label>
@@ -130,12 +130,12 @@
                                                 <td><?php echo $data['nama_produk']; ?></td>
                                                 <td><?php echo $data['stok']; ?></td>
                                                 <td><?php echo $data['harga_produk']; ?></td>
-                                                <td><img alt="" class="" width="100" src="images/avatar/<?php echo $data['foto_produk']; ?>"></td>
+                                                <td><img alt="foto" class="" width="100" src="images/avatar/<?php echo $data['foto_produk']; ?>"></td>
                                                 <td><?php echo $data['tanggal_input']; ?></td>
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
-                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                        <a href="ubah_produk.php?id=<?php echo $data['id_produk']; ?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                         <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#editmodal" data-whatever="@getbootstrap">
                                                             <i class="fa fa-pencil color-muted m-r-5"></i>
                                                         </button> 

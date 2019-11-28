@@ -12,13 +12,12 @@
                                             </label>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
-                                        
-                                              <button type="button" class="btn mb-1 btn-primary btn-lg" data-toggle="modal" data-target="#tambahmodal" data-whatever="@getbootstrap">TAMBAH DATA</button>
+                                            <button type="button" class="btn mb-1 btn-primary btn-lg" data-toggle="modal" data-target="#tambahmodal" data-whatever="@getbootstrap">TAMBAH DATA</button>
                                         <!-- tambahmodal -->                                          
-                                              <div class="modal fade" id="tambahmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true">
-                                                 <div class="modal-dialog modal-lg" role="document">
-                                                     <div class="modal-content">
-                                                         <div class="modal-header">
+                                            <div class="modal fade" id="tambahmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
                                                             <h5 class="modal-title" id="exampleModalLabel">TAMBAH DATA</h5>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                                                     aria-hidden="true">&times;</span>
@@ -77,20 +76,20 @@
                                                             </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                            <form  method="post" action="_tambah_admin.php" enctype="multipart/form-data"> 
+                                                            <form  method="post" action="_edit_admin.php" enctype="multipart/form-data"> 
                                                                 <div class="row">
                                                                 <div class="form-group col col-md-6 ml-auto">
                                                                     <label class="col-form-label">Nama Admin</label>
-                                                                    <input type="text" name="nm_admin" class="form-control input-default" placeholder="Nama Admin">
+                                                                    <input type="text" name="nama" class="form-control input-default" placeholder="Nama Admin" value="<?php echo $data['nama_admin']; ?>">
                                                                     <label class="col-form-label">Jenis Kelamin</label>
-                                                                    <select class="form-control" name="jenis_kelamin" id="sel1">
+                                                                    <select class="form-control" name="jk" id="sel1">
                                                                         <option>Laki-Laki</option>
                                                                         <option>Perempuan</option>
                                                                     </select>
                                                                     <label class="col-form-label">Alamat</label>
                                                                     <textarea type="text" name="alamat" class="form-control input-default" placeholder="Alamat" style="height:184px;"></textarea>
                                                                     <label class="col-form-label">No Hp</label>
-                                                                    <input type="text" name="no_hp" class="form-control input-default" maxlength="13" 
+                                                                    <input type="text" name="nohp" class="form-control input-default" maxlength="13" 
                                                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp">
                                                                 </div>
                                                                 <div class="form-group col col-md-6 ml-auto">
@@ -104,12 +103,12 @@
                                                                     <input type="file" name="foto" class="form-control input-default">
                                                                     <label for=""></label>
                                                                     <div class="form-check mb-3">
-                                                                     <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input" value="">&nbsp; Ceklis jika ingin mengubah foto</label>
+                                                                    <label class="form-check-label">
+                                                                        <input type="checkbox" name="ubah" class="form-check-input" value="">&nbsp; Ceklis jika ingin mengubah foto</label>
                                                                     </div>
                                                                     <label class="col-form-label">Tanggal</label>
                                                                     <input type="date" name="tanggal" readonly class="form-control input-default" value="<?php echo $now?>" >           
-                                                                </div>
+                                                                    </div>
                                                                 </div>
                                                     </div>
                                                 
@@ -128,9 +127,9 @@
                                             <tr>
                                                 <th>ID Admin</th>
                                                 <th>Nama Admin</th>
+                                                <th>Jenis Kelamin</th>
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
-                                                <th>Jenis Kelamin</th>
                                                 <th>Username</th>
                                                 <th>Password</th>
                                                 <th>Foto Profil</th>
@@ -149,9 +148,9 @@
                                             <tr>
                                                 <td><?php echo $data['id_admin']; ?></td>
                                                 <td><?php echo $data['nama_admin']; ?></td>
+                                                <td><?php echo $data['jenis_kelamin']; ?></td>
                                                 <td><?php echo $data['alamat']; ?></td>
                                                 <td><?php echo $data['no_hp']; ?></td>
-                                                <td><?php echo $data['jenis_kelamin']; ?></td>
                                                 <td><?php echo $data['username']; ?></td>
                                                 <td><?php echo $data['password']; ?></td>
                                                 <td><img alt="" class="" width="100" src="images/avatar/<?php echo $data['foto_profil']; ?>"></td>
@@ -159,7 +158,7 @@
                                                 <td>
                                                     <span>
                                                         <div class="btn-group mr-2 mb-2">
-                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                        <a href="ubah_admin.php?id=<?php echo $data['id_admin']; ?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                         <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#editmodal" data-whatever="@getbootstrap">
                                                             <i class="fa fa-pencil color-muted m-r-5"></i>
                                                         </button> 
@@ -177,12 +176,12 @@
                                         <?php } ?>
                                         </tbody>
                                         <tfoot>
-                                            <tr>
+                                            <tr>    
                                                 <th>ID Admin</th>
                                                 <th>Nama Admin</th>
+                                                <th>Jenis Kelamin</th>
                                                 <th>Alamat</th>
                                                 <th>No HP</th>
-                                                <th>Jenis Kelamin</th>
                                                 <th>Username</th>
                                                 <th>Password</th>
                                                 <th>Foto Profil</th>

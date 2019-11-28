@@ -1,18 +1,18 @@
 <?php
 // Load file koneksi.php
-include "../koneksi.php";
+require_once '../koneksi.php';
 // Ambil data NIS yang dikirim oleh form_ubah.php melalui URL
-$id = $_GET['id_admin'];
+$id = $_POST['id'];
 // Ambil Data yang Dikirim dari Form
-$nama = $_POST['nm_admin'];
-$jk = $_POST['jenis_kelamin'];
+$nama = $_POST['nama'];
+$jk   = $_POST['jk'];
 $alamat = $_POST['alamat'];
-$nohp = $_POST['no_hp'];
+$nohp = $_POST['nohp'];
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 // Cek apakah user ingin mengubah fotonya atau tidak
-if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form ubah, lakukan :
+if(isset($_POST['ubah'])){ // Jika user menceklis checkbox yang ada di form ubah, lakukan :
   // Ambil data foto yang dipilih dari form
   $foto = $_FILES['foto']['name'];
   $tmp = $_FILES['foto']['tmp_name'];
@@ -21,7 +21,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
   $fotobaru = date('dmYHis').$foto;
   
   // Set path folder tempat menyimpan fotonya
-  $path = "../../img/makanan/".$fotobaru;
+  $path = "images/avatar/".$fotobaru;
   // Proses upload
   if(move_uploaded_file($tmp, $path)){ // Cek apakah gambar berhasil diupload atau tidak
     // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
@@ -29,33 +29,33 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
     $sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
     $data = mysqli_fetch_array($sql); // Ambil data dari hasil eksekusi $sql
     // Cek apakah file foto sebelumnya ada di folder images
-    if(is_file("../../img/makanan/".$data['foto_profil'])) // Jika foto ada
-      unlink("../../img/makanan/".$data['foto_profil']); // Hapus file foto sebelumnya yang ada di folder images
+    if(is_file("images/avatar/".$data['foto_profil'])) // Jika foto ada
+      unlink("img/avatar/".$data['foto_profil']); // Hapus file foto sebelumnya yang ada di folder images
     
     // Proses ubah data ke Database
-    $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."', foto_profil='".$fotobaru."', tanggal_daftar='".$tanggal."' WHERE id_admin='".$id."'";
+    $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."', foto_profil='".$fotobaru."' WHERE id_admin='".$id."'";
     $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
       // Jika Sukses, Lakukan :
-      echo "<script>alert('Data Berhasil Disimpan');document.location.href='../admin.php?page=makanan'</script>\n"; // Redirect ke halaman admin.php
+      echo "<script>alert('Data Berhasil Disimpan');document.location.href='index.php?page=paket'</script>\n"; // Redirect ke halaman admin.php
     }else{
       // Jika Gagal, Lakukan :
-      echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='../admin.php?page=makanan'</script>\n";
+      echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='index.php?page=paket'</script>\n";
     }
   }else{
     // Jika gambar gagal diupload, Lakukan :
-    echo "<script>alert('Data Gagal Disimpan karena gagal upload foto');document.location.href='../admin.php?page=makanan'</script>\n";
+    echo "<script>alert('Data Gagal Disimpan karena gagal upload foto');document.location.href='index.php?page=paket'</script>\n";
   }
 }else{ // Jika user tidak menceklis checkbox yang ada di form ubah, lakukan :
   // Proses ubah data ke Database
-  $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."' WHERE id_makanan='".$id."'";
+  $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."', foto_profil='' WHERE id_admin='".$id."'";
   $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
   if($sql){ // Cek jika proses simpan ke database sukses atau tidak
     // Jika Sukses, Lakukan :
-    echo "<script>alert('Data Berhasil Disimpan');document.location.href='../admin.php?page=makanan'</script>\n"; // Redirect ke halaman admin.php
+    echo "<script>alert('Data Berhasil Disimpan');document.location.href='index.php?page=paket'</script>\n"; // Redirect ke halaman admin.php
   }else{
     // Jika Gagal, Lakukan :
-    echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='../admin.php?page=makanan'</script>\n";
+    echo "<script>alert('Data Gagal Disimpan karena gagal terhubung ke server');document.location.href='index.php?page=paket'</script>\n";
   }
 }
 ?>
