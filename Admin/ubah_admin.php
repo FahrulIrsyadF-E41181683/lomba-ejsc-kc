@@ -88,7 +88,7 @@
                                             <label class="col-form-label">Tanggal</label>
                                             <input type="date" name="tanggal" readonly class="form-control input-default" value="<?= $query['tanggal_daftar']?>" >           
                                             </div>
-                                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="ubah">Ubah</button>
+                                            <button type="button" class="btn btn-primary btn-lg btn-block" name="ubah">Ubah</button>
                                             <a href="index.php?page=produk" class="btn btn-secondary btn-lg btn-block" style="color:white;">Batal</a>
                                         </div>
                                 </form>
