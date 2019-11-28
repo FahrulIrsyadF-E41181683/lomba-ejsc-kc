@@ -16,12 +16,12 @@ $sum      = $row['total'];
 $jmltr    = $row2['jmlt'];
 $jmlcs    = $row3['jmlp'];
 $now = date_create('now')->format('Y-m-d');
+ 
+// if ($username == "" || $username == NULL || empty($username)) { 
 
-if ($username == "" || $username == NULL || empty($username)) { 
-
-echo "<script>document.location.href='login.php'</script>\n";
+//     echo "<script>document.location.href='login.php'</script>\n";
     
-}else{
+// }else{
 
 ?> 
 
@@ -336,9 +336,6 @@ echo "<script>document.location.href='login.php'</script>\n";
             case 'produk':
                 include "./_produk.php";
                 break;
-            case 'suplier':
-                include "./_suplier.php";
-            break;
             case 'laba':
                 include "./_laba.php";
                 break;
@@ -376,7 +373,7 @@ echo "<script>document.location.href='login.php'</script>\n";
         <!--**********************************
             Content body end
         ***********************************-->
-    </div>
+
 
         <!--**********************************
             Footer start
@@ -433,10 +430,10 @@ echo "<script>document.location.href='login.php'</script>\n";
 
     <script src="./js/dashboard/dashboard-1.js"></script>
 
-
+ 
 
 </body>
 
 </html>
 
-    <?php } ?>
+<?php ?>

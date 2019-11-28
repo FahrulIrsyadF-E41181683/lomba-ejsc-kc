@@ -48,4 +48,4 @@ if(in_array($ekstensi, $ekstensi_diperbolehkan) === true | move_uploaded_file($t
 }else{
   // Jika gambar gagal diupload, Lakukan :
   echo "<script>alert('Data Gagal Disimpan karena gagal upload foto');document.location.href='index.php?page=paket'</script>\n";
-}}
+}} ?>
