@@ -17,13 +17,13 @@ $jmltr    = $row2['jmlt'];
 $jmlcs    = $row3['jmlp'];
 $now = date_create('now')->format('Y-m-d');
 
- if ($username == "" || $username == NULL || empty($username)) { 
+if ($username == "" || $username == NULL || empty($username)) { 
 
-   echo "<script>document.location.href='login.php'</script>\n";
-
+echo "<script>document.location.href='login.php'</script>\n";
+    
 }else{
 
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -307,72 +307,14 @@ $now = date_create('now')->format('Y-m-d');
                     </li>
                 </ul>
             </div>
-            <!--**********************************
+        </div>
+        <!--**********************************
             Sidebar end
         ***********************************-->
 
-            <!--**********************************
+        <!--**********************************
             Content body start
         ***********************************-->
-<<<<<<< HEAD
-            <div class="content-body">
-                <?php
-                if (isset($_GET['page'])) {
-                    $page = $_GET['page'];
-
-                    switch ($page) {
-                        case 'home':
-                            include "_index.php";
-                            break;
-                        case 'paket':
-                            include "./_admin.php";
-                            break;
-                        case 'suplier':
-                            include "./_suplier.php";
-                            break;
-                        case 'ramal':
-                            include "./_ramal_stok.php";
-                            break;
-                        case 'produk':
-                            include "./_produk.php";
-                            break;
-                        case 'laba':
-                            include "./_laba.php";
-                            break;
-                        case 'galeri':
-                            include "drink.php";
-                            break;
-                        case 'contact':
-                            include "contact.php";
-                            break;
-                        case 'logout':
-                            include "logout.php";
-                            break;
-                        case 'editadmin':
-                            include "_edit_admin.php";
-                            break;
-                        case 'inputmakanan':
-                            include "makanan/inputmakanan.php";
-                            break;
-                        case 'editmakanan':
-                            include "makanan/formeditmakanan.php";
-                            break;
-                        case 'inputgaleri':
-                            include "makanan/inputgaleri.php";
-                            break;
-                        case 'editgaleri':
-                            include "makanan/formeditgaleri.php";
-                            break;
-                        default:
-                            include "./_admin.php";
-                            break;
-                    }
-                }
-                ?>
-                    <!-- #/ container -->
-            </div>
-            <!--**********************************
-=======
         <div class="content-body">
             <?php 
 	if(isset($_GET['page'])){
@@ -394,6 +336,9 @@ $now = date_create('now')->format('Y-m-d');
             case 'produk':
                 include "./_produk.php";
                 break;
+            case 'suplier':
+                include "./_suplier.php";
+            break;
             case 'laba':
                 include "./_laba.php";
                 break;
@@ -429,65 +374,64 @@ $now = date_create('now')->format('Y-m-d');
             <!-- #/ container -->
         </div>
         <!--**********************************
->>>>>>> parent of 78338ec... tombol hapus suplier fix
             Content body end
         ***********************************-->
+    </div>
 
-
-            <!--**********************************
+        <!--**********************************
             Footer start
         ***********************************-->
-            <div class="footer">
-                <div class="copyright">
-                    <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Aksata</a> 2018</p>
-                </div>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Aksata</a> 2018</p>
             </div>
-            <!--**********************************
-            Footer end
-        ***********************************-->
         </div>
         <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
         Main wrapper end
     ***********************************-->
 
-        <!--**********************************
+    <!--**********************************
         Scripts
     ***********************************-->
-        <script src="plugins/common/common.min.js"></script>
-        <script src="js/custom.min.js"></script>
-        <script src="js/settings.js"></script>
-        <script src="js/gleek.js"></script>
-        <script src="js/styleSwitcher.js"></script>
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
 
-        <!-- Chartjs -->
-        <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
-        <!-- Circle progress -->
-        <script src="./plugins/circle-progress/circle-progress.min.js"></script>
-        <!-- Datamap -->
-        <script src="./plugins/d3v3/index.js"></script>
-        <script src="./plugins/topojson/topojson.min.js"></script>
-        <script src="./plugins/datamaps/datamaps.world.min.js"></script>
-        <!-- Morrisjs -->
-        <script src="./plugins/raphael/raphael.min.js"></script>
-        <script src="./plugins/morris/morris.min.js"></script>
-        <!-- Pignose Calender -->
-        <script src="./plugins/moment/moment.min.js"></script>
-        <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
-        <!-- ChartistJS -->
-        <script src="./plugins/chartist/js/chartist.min.js"></script>
-        <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+    <!-- Chartjs -->
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="./plugins/d3v3/index.js"></script>
+    <script src="./plugins/topojson/topojson.min.js"></script>
+    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./plugins/raphael/raphael.min.js"></script>
+    <script src="./plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="./plugins/chartist/js/chartist.min.js"></script>
+    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+    
+    <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
 
-        <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
-        <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
-        <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <script src="./js/plugins-init/chartjs-init.js"></script>
+    
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
 
-        <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
-        <script src="./js/plugins-init/chartjs-init.js"></script>
-
-        <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
-        <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
-
-        <script src="./js/dashboard/dashboard-1.js"></script>
+    <script src="./js/dashboard/dashboard-1.js"></script>
 
 
 
@@ -495,4 +439,4 @@ $now = date_create('now')->format('Y-m-d');
 
 </html>
 
-<?php }?>
+    <?php } ?>
