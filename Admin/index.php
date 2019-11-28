@@ -436,4 +436,4 @@ $now = date_create('now')->format('Y-m-d');
 
 </html>
 
-<?php ?>
+<?php }?>
