@@ -314,6 +314,7 @@ $now = date_create('now')->format('Y-m-d');
             <!--**********************************
             Content body start
         ***********************************-->
+<<<<<<< HEAD
             <div class="content-body">
                 <?php
                 if (isset($_GET['page'])) {
@@ -371,6 +372,64 @@ $now = date_create('now')->format('Y-m-d');
                     <!-- #/ container -->
             </div>
             <!--**********************************
+=======
+        <div class="content-body">
+            <?php 
+	if(isset($_GET['page'])){
+		$page = $_GET['page'];
+
+		switch ($page) {
+			case 'home':
+				include "_index.php";
+				break;
+			case 'paket':
+				include "./_admin.php";
+                break;
+            case 'suplier':
+                include "./_suplier.php";
+                break;
+            case 'ramal':
+                include "./_ramal_stok.php";
+                break;
+            case 'produk':
+                include "./_produk.php";
+                break;
+            case 'laba':
+                include "./_laba.php";
+                break;
+			case 'galeri':
+				include "drink.php";
+				break;
+			case 'contact':
+				include "contact.php";
+				break;	
+            case 'logout':
+                include "logout.php";
+                break;
+            case 'editadmin':
+                include "_edit_admin.php";
+                break;
+            case 'inputmakanan':
+                include "makanan/inputmakanan.php";
+                break;
+            case 'editmakanan':
+                include "makanan/formeditmakanan.php";
+                break;
+            case 'inputgaleri':
+                include "makanan/inputgaleri.php";
+                break;
+            case 'editgaleri':
+                include "makanan/formeditgaleri.php";
+                break;
+			default:
+				include "./_admin.php";
+				break;
+		}}
+	?>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+>>>>>>> parent of 78338ec... tombol hapus suplier fix
             Content body end
         ***********************************-->
 
