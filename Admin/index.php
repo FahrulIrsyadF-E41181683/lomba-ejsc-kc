@@ -336,6 +336,9 @@ $now = date_create('now')->format('Y-m-d');
             case 'produk':
                 include "./_produk.php";
                 break;
+            case 'suplier':
+                include "./_suplier.php";
+            break;
             case 'laba':
                 include "./_laba.php";
                 break;
