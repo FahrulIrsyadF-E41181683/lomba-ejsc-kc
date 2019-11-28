@@ -342,6 +342,9 @@ if ($username == "" || $username == NULL || empty($username)) {
             case 'logout':
                 include "logout.php";
                 break;
+            case 'editadmin':
+                include "_edit_admin.php";
+                break;
             case 'inputmakanan':
                 include "makanan/inputmakanan.php";
                 break;

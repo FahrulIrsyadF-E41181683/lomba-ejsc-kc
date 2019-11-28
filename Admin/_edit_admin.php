@@ -2,11 +2,15 @@
 // Load file koneksi.php
 include "../koneksi.php";
 // Ambil data NIS yang dikirim oleh form_ubah.php melalui URL
-$id = $_GET['id'];
+$id = $_GET['id_admin'];
 // Ambil Data yang Dikirim dari Form
-$nama = $_POST['nama'];
-$desc = $_POST['desc'];
-$harga = $_POST['harga'];
+$nama = $_POST['nm_admin'];
+$jk = $_POST['jenis_kelamin'];
+$alamat = $_POST['alamat'];
+$nohp = $_POST['no_hp'];
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 // Cek apakah user ingin mengubah fotonya atau tidak
 if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form ubah, lakukan :
   // Ambil data foto yang dipilih dari form
@@ -21,15 +25,15 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
   // Proses upload
   if(move_uploaded_file($tmp, $path)){ // Cek apakah gambar berhasil diupload atau tidak
     // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
-    $query = "SELECT * FROM tb_makanan WHERE id_makanan='".$id."'";
+    $query = "SELECT * FROM tabel_admin WHERE id_admin='".$id."'";
     $sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
     $data = mysqli_fetch_array($sql); // Ambil data dari hasil eksekusi $sql
     // Cek apakah file foto sebelumnya ada di folder images
-    if(is_file("../../img/makanan/".$data['gambar_makanan'])) // Jika foto ada
-      unlink("../../img/makanan/".$data['gambar_makanan']); // Hapus file foto sebelumnya yang ada di folder images
+    if(is_file("../../img/makanan/".$data['foto_profil'])) // Jika foto ada
+      unlink("../../img/makanan/".$data['foto_profil']); // Hapus file foto sebelumnya yang ada di folder images
     
     // Proses ubah data ke Database
-    $query = "UPDATE tb_makanan SET nama_makanan='".$nama."', desc_makanan='".$desc."', gambar_makanan='".$fotobaru."',harga_makanan='".$harga."' WHERE id_makanan='".$id."'";
+    $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."', foto_profil='".$fotobaru."', tanggal_daftar='".$tanggal."' WHERE id_admin='".$id."'";
     $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
       // Jika Sukses, Lakukan :
@@ -44,7 +48,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
   }
 }else{ // Jika user tidak menceklis checkbox yang ada di form ubah, lakukan :
   // Proses ubah data ke Database
-  $query = "UPDATE tb_makanan SET nama_makanan='".$nama."', desc_makanan='".$desc."',harga_makanan='".$harga."' WHERE id_makanan='".$id."'";
+  $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."' WHERE id_makanan='".$id."'";
   $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
   if($sql){ // Cek jika proses simpan ke database sukses atau tidak
     // Jika Sukses, Lakukan :
