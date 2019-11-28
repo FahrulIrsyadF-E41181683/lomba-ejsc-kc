@@ -17,11 +17,11 @@ $jmltr    = $row2['jmlt'];
 $jmlcs    = $row3['jmlp'];
 $now = date_create('now')->format('Y-m-d');
  
-// if ($username == "" || $username == NULL || empty($username)) { 
+if ($username == "" || $username == NULL || empty($username)) { 
 
-//     echo "<script>document.location.href='login.php'</script>\n";
+    echo "<script>document.location.href='login.php'</script>\n";
     
-// }else{
+}else{
 
 ?> 
 
@@ -262,7 +262,7 @@ $now = date_create('now')->format('Y-m-d');
                                         <li>
                                             <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
                                         </li>
-                                        <li><a href="../logout.php"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="logout.php" onclick="return confirm('Apakah adna ingin Logout ?')"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -299,7 +299,7 @@ $now = date_create('now')->format('Y-m-d');
                         <ul aria-expanded="false">
                             <li><a href="?page=paket">Admin</a></li>
                             <li><a href="?page=produk">Produk</a></li>
-                            <li><a href="./table-datatable.html">Pegawai</a></li>
+                            <li><a href="?page=biaya">Biaya</a></li>
                             <li><a href="?page=suplier">Suplier</a></li>
                             <li><a href="?page=ramal">Peramalan Stok</a></li>
                             <li><a href="?page=laba">Perhitungan Laba</a></li>
@@ -327,17 +327,20 @@ $now = date_create('now')->format('Y-m-d');
 			case 'paket':
 				include "./_admin.php";
                 break;
-            case 'suplier':
-                include "./_suplier.php";
-                break;
-            case 'ramal':
-                include "./_ramal_stok.php";
-                break;
             case 'produk':
                 include "./_produk.php";
                 break;
+            case 'biaya':
+                include "./_biaya.php";
+                break;
+            case 'suplier':
+                include "./_suplier.php";
+                break;
             case 'laba':
                 include "./_laba.php";
+                break;
+            case 'ramal':
+                include "./_ramal_stok.php";
                 break;
 			case 'galeri':
 				include "drink.php";
@@ -436,4 +439,4 @@ $now = date_create('now')->format('Y-m-d');
 
 </html>
 
-<?php ?>
+    <?php } ?>

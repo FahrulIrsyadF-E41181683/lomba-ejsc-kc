@@ -30,7 +30,7 @@ if(isset($_POST['ubah'])){ // Jika user menceklis checkbox yang ada di form ubah
     $data = mysqli_fetch_array($sql); // Ambil data dari hasil eksekusi $sql
     // Cek apakah file foto sebelumnya ada di folder images
     if(is_file("images/avatar/".$data['foto_profil'])) // Jika foto ada
-      unlink("img/avatar/".$data['foto_profil']); // Hapus file foto sebelumnya yang ada di folder images
+      unlink("images/avatar/".$data['foto_profil']); // Hapus file foto sebelumnya yang ada di folder images
     
     // Proses ubah data ke Database
     $query = "UPDATE tabel_admin SET nama_admin='".$nama."', jenis_kelamin='".$jk."', alamat='".$alamat."', no_hp='".$nohp."', email='".$email."', username='".$username."', password='".$password."', foto_profil='".$fotobaru."' WHERE id_admin='".$id."'";

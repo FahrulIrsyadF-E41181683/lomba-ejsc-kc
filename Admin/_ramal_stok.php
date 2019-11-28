@@ -12,15 +12,20 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group col col-md-6 ml-auto">
+                                                <label class="col-form-label">Pilih Produk</label>
+                                                    <select class="form-control" name="produk" id="sel1">
+                                                        <option></option>
+                                                    </select>
                                                 <label class="col-form-label">Stok Barang Bulan Ini</label>
-                                                    <input type="text" name="stoklm" class="form-control input-default" placeholder="Masukkan Jumlah Stok">
-                                                <label class="col-form-label">Masukkan Bulan Ramal</label>
-                                                <input type="text" name="blnramal" class="form-control input-default" placeholder="Masukkan Bulan">
+                                                <input type="text" name="stoklm" class="form-control input-default" placeholder="Masukkan Jumlah Stok">
                                             </div>
                                             <div class="form-group col col-md-6 ml-auto">
+                                                <label class="col-form-label">Masukkan Bulan Ramal</label>
+                                                <input type="month" name="blnramal" class="form-control input-default" placeholder="Masukkan Bulan">
                                                 <label class="col-form-label">Stok Barang Bulan Ramal</label>
                                                 <input type="text" name="stokbr" class="form-control input-default" placeholder="Jumlah Stok yang diramal">             
                                             </div>
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="hitung">Hitung</button>
                                         </div>
                                 </div>
                             </div>

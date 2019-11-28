@@ -12,7 +12,9 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group col col-md-6 ml-auto">
-                                                <label class="col-form-label">Modal Awal</label>
+                                                    <label class="col-form-label">Pilih Bulan</label>
+                                                    <input type="month" name="bulan" class="form-control input-default" placeholder="Masukkan Modal Awal" value="<?= $tgl; ?>">
+                                                    <label class="col-form-label">Modal Awal</label>
                                                     <input type="text" name="modalawal" class="form-control input-default" placeholder="Masukkan Modal Awal">
                                                     <label class="col-form-label">Pendapatan</label>
                                                     <input type="text" name="pendapatan" class="form-control input-default" placeholder="Masukkan Pendapatan">
