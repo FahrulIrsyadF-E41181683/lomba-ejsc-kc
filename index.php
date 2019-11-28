@@ -52,17 +52,16 @@ http://www.templatemo.com/tm-509-hydro
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#home" class="smoothScroll">Home</a></li>
-                         <li><a href="#about" class="smoothScroll">Tentang</a></li>
+                         <li><a href="#about" class="smoothScroll">Tentang Kami</a></li>
                          <li><a href="#blog" class="smoothScroll">Produk</a></li>
                          <li><a href="#work" class="smoothScroll">Galeri</a></li>
-                         <li><a href="#contact" class="smoothScroll">Kontak Kami</a></li>
+                         <li><a href="#contact" class="smoothScroll">Masukan</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Subscribe</a>
                          </li>
                     </ul>
                </div>
@@ -79,7 +78,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-6 col-sm-12">
                          <div class="home-info">
-                              <h1>Lengkap, Murah, Puas, Harga pas</h1>
+                              <h1>Lengkap, Puas, Harga pas</h1>
                               <a href="#contact" class="btn section-btn smoothScroll">Kunjungi Toko</a>
                               <span>
                                    CALL US (+66) 010-020-0340
@@ -119,39 +118,6 @@ http://www.templatemo.com/tm-509-hydro
                          </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6">
-                         <div class="about-info skill-thumb">
-
-                              <strong>Web Design</strong>
-                              <span class="pull-right">85%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-                              </div>
-
-                              <strong>Photography</strong>
-                              <span class="pull-right">90%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                              </div>
-
-                              <strong>Content Marketing</strong>
-                              <span class="pull-right">75%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                              </div>
-
-                              <strong>CMS Admin</strong>
-                              <span class="pull-right">70%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                              </div>
-
-                         </div>
-                    </div>
 
                     <div class="col-md-4 col-sm-12">
                          <div class="about-image">
@@ -175,66 +141,26 @@ http://www.templatemo.com/tm-509-hydro
                               <span class="line-bar">...</span>
                          </div>
                     </div>
-
+                                        <?php
+                                        include 'koneksi.php';
+                                        $query = "Select * from tabel_produk";
+                                        $sql = mysqli_query($connect, $query);
+                                        while($data = mysqli_fetch_assoc($sql)){
+                                        ?>
                     <div class="col-md-6 col-sm-6">
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="#"><img src="images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   <a href="#"><img src="Admin/images/avatar/<?php echo $data['foto_produk']; ?>" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 22, 2019</small>
-                                   <h3><a href="#">Tepung Segitiga Biru</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="" class="btn section-btn">Rp. 10.000</a>
+                                   <small><i class="fa fa-clock-o"></i> <?php echo $data['tanggal_input']; ?></small>
+                                   <h3><a href="#"><?php echo $data['nama_produk']; ?></a></h3>
+                                   <a href="" class="btn section-btn">Rp. <?php echo $data['harga_produk']; ?></a>
                               </div>
                          </div>
                     </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="#"><img src="images/blog-image2.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 18, 2019</small>
-                                   <h3><a href="#">Mie Sedap Goreng 1 Kardus</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="#" class="btn section-btn">Rp. 45.000</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="#"><img src="images/blog-image3.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 14, 2019</small>
-                                   <h3><a href="#">Beras Setra Famos 5Kg</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="#" class="btn section-btn">Rp. 51.000</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="#"><img src="images/blog-image4.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 10, 2019</small>
-                                   <h3><a href="#">Minyak Goreng Sania 1 Liter</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="#" class="btn section-btn">Rp. 11.000</a>
-                              </div>
-                         </div>
-                    </div>
+                                        <?php }?>
 
                </div>
           </div>
@@ -248,7 +174,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Mitra Kami</h2>
+                              <h2>Galeri</h2>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
@@ -320,7 +246,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Kontak Kami</h2>
+                              <h2>Masukan</h2>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
@@ -339,25 +265,8 @@ http://www.templatemo.com/tm-509-hydro
                                         name="cf-email" required="">
                               </div>
 
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number"
-                                        name="cf-number" required="">
-                              </div>
-
-                              <div class="col-md-6 col-sm-6">
-                                   <select class="form-control" id="cf-budgets" name="cf-budgets">
-                                        <option>Budget Level</option>
-                                        <option>$500 to $1,000</option>
-                                        <option>$1,000 to $2,200</option>
-                                        <option>$2,200 to $4,500</option>
-                                        <option>$4,500 to $7,500</option>
-                                        <option>$7,500 to $12,000</option>
-                                        <option>$12,000 or more</option>
-                                   </select>
-                              </div>
-
                               <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="6" placeholder="Your requirements"
+                                   <textarea class="form-control" rows="6" placeholder=""
                                         id="cf-message" name="cf-message" required=""></textarea>
                               </div>
 
