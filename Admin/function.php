@@ -60,7 +60,7 @@
                                         ?>
 
                                         <label class="col-form-label">Masukkan stok Bulan ke - <?php echo "$x" ?></label>
-                                        <input type="number" name="<?php echo "y$x" ?>" class="form-control input-default" placeholder="Masukkan Stok Bualan ke - <?php echo "$x" ?> ">
+                                        <input type="number" name="<?php echo "y$x" ?>" class="form-control input-default" placeholder="Masukkan Stok Bulan ke - <?php echo "$x" ?> ">
 
 
                                     <?php

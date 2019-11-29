@@ -81,8 +81,8 @@ http://www.templatemo.com/tm-509-hydro
                               <h1>Lengkap, Puas, Harga pas</h1>
                               <a href="#contact" class="btn section-btn smoothScroll">Kunjungi Toko</a>
                               <span>
-                                   CALL US (+66) 010-020-0340
-                                   <small>For any inquiry</small>
+                                   Kontak Kami +(62)85-815-334-190
+                                   <small>Jika Ada Yang di tanyakan</small>
                               </span>
                          </div>
                     </div>
@@ -121,7 +121,8 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-4 col-sm-12">
                          <div class="about-image">
-                              <img src="images/about-image.jpg" class="img-responsive" alt="">
+                         <img src="images/work-image3.jpg" class="img-responsive" alt="">
+                              <!-- <img src="images/about-image.jpg" class="img-responsive" alt=""> -->
                          </div>
                     </div>
 
@@ -186,8 +187,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="images/work-image1.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Clean &amp; Minimal</h3>
-                                        <small>Product Design</small>
+                                        <h3>Mitra Kami</h3>
+                                        <small>Toko 1</small>
                                    </div>
                               </a>
                          </div>
@@ -200,8 +201,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="images/work-image2.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Studio Bag</h3>
-                                        <small>Branding</small>
+                                        <h3>Mitra Kami</h3>
+                                        <small>Toko 2</small>
                                    </div>
                               </a>
                          </div>
@@ -214,8 +215,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="images/work-image3.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Frame Design</h3>
-                                        <small>Photography</small>
+                                        <h3>Mitra Kami</h3>
+                                        <small>Toko 3</small>
                                    </div>
                               </a>
                          </div>
@@ -228,8 +229,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="images/work-image4.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Paint Work</h3>
-                                        <small>Art, Design</small>
+                                        <h3>Mitra Kami</h3>
+                                        <small>Toko 4</small>
                                    </div>
                               </a>
                          </div>
@@ -335,7 +336,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-4">
                          <div class="footer-thumb">
                               <h2>Temukan Kami</h2>
-                              <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
+                              <p>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124,</p>
                          </div>
                     </div>
 
@@ -348,7 +349,7 @@ http://www.templatemo.com/tm-509-hydro
                               </div>
                               <div class="col-md-6 col-sm-7">
                                    <div class="phone-contact">
-                                        <p>Call us <span>(+66) 010-020-0340</span></p>
+                                        <p>Kontak Kami <span>+(62)85-815-334-190</span></p>
                                    </div>
                                    <ul class="social-icon">
                                         <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square"
