@@ -55,7 +55,7 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="#about" class="smoothScroll">Tentang Kami</a></li>
                          <li><a href="#blog" class="smoothScroll">Produk</a></li>
                          <li><a href="#work" class="smoothScroll">Galeri</a></li>
-                         <li><a href="#contact" class="smoothScroll">Masukan</a></li>
+                         <li><a href="#contact" class="smoothScroll">Hubungi Kami</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -90,8 +90,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-6 col-sm-12">
                          <div class="home-video">
                               <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe src="https://www.youtube.com/embed/OkEk1wdd2zk" frameborder="0"
-                                        allowfullscreen></iframe>
+                                   <iframe src="https://www.youtube.com/embed/OkEk1wdd2zk" frameborder="0" allowfullscreen></iframe>
                               </div>
                          </div>
                     </div>
@@ -142,26 +141,26 @@ http://www.templatemo.com/tm-509-hydro
                               <span class="line-bar">...</span>
                          </div>
                     </div>
-                                        <?php
-                                        include 'koneksi.php';
-                                        $query = "Select * from tabel_produk";
-                                        $sql = mysqli_query($connect, $query);
-                                        while($data = mysqli_fetch_assoc($sql)){
-                                        ?>
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="#"><img src="Admin/images/avatar/<?php echo $data['foto_produk']; ?>" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> <?php echo $data['tanggal_input']; ?></small>
-                                   <h3><a href="#"><?php echo $data['nama_produk']; ?></a></h3>
-                                   <a href="" class="btn section-btn">Rp. <?php echo $data['harga_produk']; ?></a>
+                    <?php
+                    include 'koneksi.php';
+                    $query = "Select * from tabel_produk";
+                    $sql = mysqli_query($connect, $query);
+                    while ($data = mysqli_fetch_assoc($sql)) {
+                         ?>
+                         <div class="col-md-6 col-sm-6">
+                              <!-- BLOG THUMB -->
+                              <div class="media blog-thumb">
+                                   <div class="media-object media-left">
+                                        <a href="#"><img src="Admin/images/avatar/<?php echo $data['foto_produk']; ?>" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> <?php echo $data['tanggal_input']; ?></small>
+                                        <h3><a href="#"><?php echo $data['nama_produk']; ?></a></h3>
+                                        <a href="" class="btn section-btn">Rp. <?php echo $data['harga_produk']; ?></a>
+                                   </div>
                               </div>
                          </div>
-                    </div>
-                                        <?php }?>
+                    <?php } ?>
 
                </div>
           </div>
@@ -247,7 +246,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Masukan</h2>
+                              <h2>Hunungi Kami</h2>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
@@ -257,18 +256,15 @@ http://www.templatemo.com/tm-509-hydro
                          <!-- CONTACT FORM HERE -->
                          <form id="contact-form" role="form" action="#" method="post">
                               <div class="col-md-6 col-sm-6">
-                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name"
-                                        name="cf-name" required="">
+                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email"
-                                        name="cf-email" required="">
+                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
                               </div>
 
                               <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="6" placeholder=""
-                                        id="cf-message" name="cf-message" required=""></textarea>
+                                   <textarea class="form-control" rows="6" placeholder="Pesan" id="cf-message" name="cf-message" required=""></textarea>
                               </div>
 
                               <div class="col-md-4 col-sm-12">
@@ -286,9 +282,7 @@ http://www.templatemo.com/tm-509-hydro
                               3. Click "Share" and choose "Embed map" tab
                               4. Copy only URL and paste it within the src="" field below
                               -->
-                              <iframe
-                                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435.148953451446!2d113.71470321164617!3d-8.157739728281904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6951271c09c15%3A0xf21c0a7b53edc843!2sToko%20Grosir%20Pojok%20Mastrip!5e0!3m2!1sen!2sid!4v1574409552205!5m2!1sen!2sid"
-                                   allowfullscreen></iframe>
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435.148953451446!2d113.71470321164617!3d-8.157739728281904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6951271c09c15%3A0xf21c0a7b53edc843!2sToko%20Grosir%20Pojok%20Mastrip!5e0!3m2!1sen!2sid!4v1574409552205!5m2!1sen!2sid" allowfullscreen></iframe>
                          </div>
                     </div>
 
@@ -352,8 +346,7 @@ http://www.templatemo.com/tm-509-hydro
                                         <p>Kontak Kami <span>+(62)85-815-334-190</span></p>
                                    </div>
                                    <ul class="social-icon">
-                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square"
-                                                  attr="facebook icon"></a></li>
+                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                         <li><a href="#" class="fa fa-twitter"></a></li>
                                         <li><a href="#" class="fa fa-instagram"></a></li>
                                    </ul>
@@ -367,8 +360,7 @@ http://www.templatemo.com/tm-509-hydro
 
 
      <!-- MODAL -->
-     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-          aria-hidden="true">
+     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
                <div class="modal-content modal-popup">
 
@@ -389,37 +381,27 @@ http://www.templatemo.com/tm-509-hydro
 
                                         <!-- NAV TABS -->
                                         <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab"
-                                                       data-toggle="tab">Buat Akun</a></li>
-                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab"
-                                                       data-toggle="tab">Masuk</a></li>
+                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Buat Akun</a></li>
+                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Masuk</a></li>
                                         </ul>
 
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
                                                   <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name"
-                                                            placeholder="Name" required>
-                                                       <input type="telephone" class="form-control" name="telephone"
-                                                            placeholder="Telephone" required>
-                                                       <input type="email" class="form-control" name="email"
-                                                            placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password"
-                                                            placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit"
-                                                            value="Submit Button">
+                                                       <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
                                                   </form>
                                              </div>
 
                                              <div role="tabpanel" class="tab-pane fade in" id="sign_in">
                                                   <form action="#" method="post">
-                                                       <input type="email" class="form-control" name="email"
-                                                            placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password"
-                                                            placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit"
-                                                            value="Submit Button">
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
                                                        <a href="https://www.facebook.com/templatemo">Forgot your
                                                             password?</a>
                                                   </form>
