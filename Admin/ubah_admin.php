@@ -1,5 +1,5 @@
 <?php
-    require '../koneksi.php';
+require '../koneksi.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +14,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
-    
+
 </head>
 
 <?php
-    $id  = $_GET['id'];
-    $sql = mysqli_query($connect, "SELECT * FROM tabel_admin WHERE id_admin='".$id."'");
-    $query = mysqli_fetch_assoc($sql);
+$id  = $_GET['id'];
+$sql = mysqli_query($connect, "SELECT * FROM tabel_admin WHERE id_admin='" . $id . "'");
+$query = mysqli_fetch_assoc($sql);
 ?>
 
 <body class="h-100">
-    
+
     <!--*******************
         Preloader start
     ********************-->
@@ -39,7 +39,7 @@
         Preloader end
     ********************-->
 
-    
+
 
 
 
@@ -50,26 +50,27 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                
-                                    <a class="text-center" href="index.html"> <h4>Ubah Data</h4></a>
-        
-                                    <form  method="post" action="_edit_admin.php" enctype="multipart/form-data"> 
-                                        <div class="row">
+
+                                <a class="text-center" href="index.html">
+                                    <h4>Ubah Data</h4>
+                                </a>
+
+                                <form method="post" action="_edit_admin.php" enctype="multipart/form-data">
+                                    <div class="row">
                                         <div class="form-group col col-md-6 ml-auto">
-                                            <input type="hidden" name="id" value="<?= $id?>">
+                                            <input type="hidden" name="id" value="<?= $id ?>">
                                             <label class="col-form-label">Nama Admin</label>
                                             <input type="text" name="nama" class="form-control input-default" placeholder="Nama Admin" value="<?= $query['nama_admin']; ?>">
                                             <label class="col-form-label">Jenis Kelamin</label>
                                             <select class="form-control" name="jk" id="sel1">
                                                 <option><?= $query['jenis_kelamin']; ?></option>
-                                                <option value="">Laki-laki</option>
-                                                <option value="">Perempuan</option>
+                                                <option value="Laki-laki">Laki-laki</option>
+                                                <option value="Perempuan">Perempuan</option>
                                             </select>
                                             <label class="col-form-label">Alamat</label>
                                             <textarea type="text" name="alamat" class="form-control input-default" placeholder="Alamat" style="height:184px;"><?= $query['alamat']; ?></textarea>
                                             <label class="col-form-label">No Hp</label>
-                                            <input type="text" name="nohp" class="form-control input-default" maxlength="13" 
-                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp" value="<?= $query['no_hp']; ?>">
+                                            <input type="text" name="nohp" class="form-control input-default" maxlength="13" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="No Hp" value="<?= $query['no_hp']; ?>">
                                         </div>
                                         <div class="form-group col col-md-6 ml-auto">
                                             <label class="col-form-label">Email</label>
@@ -82,17 +83,16 @@
                                             <input type="file" name="foto" class="form-control input-default">
                                             <label for=""></label>
                                             <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" name="ubah" class="form-check-input" value="">&nbsp; Ceklis jika ingin mengubah foto</label>
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" name="ubah" class="form-check-input" value="">&nbsp; Ceklis jika ingin mengubah foto</label>
                                             </div>
                                             <label class="col-form-label">Tanggal</label>
-                                            <input type="date" name="tanggal" readonly class="form-control input-default" value="<?= $query['tanggal_daftar']?>" >           
-                                            </div>
-                                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="ubah">Ubah</button>
-                                            <a href="index.php?page=paket" class="btn btn-secondary btn-lg btn-block" style="color:white;">Batal</a>
+                                            <input type="date" name="tanggal" readonly class="form-control input-default" value="<?= $query['tanggal_daftar'] ?>">
                                         </div>
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="ubah">Ubah</button>
+                                        <a href="index.php?page=paket" class="btn btn-secondary btn-lg btn-block" style="color:white;">Batal</a>
+                                    </div>
                                 </form>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -100,9 +100,10 @@
             </div>
         </div>
     </div>
-    
+    </div>
 
-    
+
+
 
     <!--**********************************
         Scripts
@@ -113,9 +114,5 @@
     <script src="js/gleek.js"></script>
     <script src="js/styleSwitcher.js"></script>
 </body>
+
 </html>
-
-
-
-
-
