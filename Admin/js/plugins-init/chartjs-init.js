@@ -7,12 +7,12 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+            labels: ["2013", "2014", "2015", "2016", "2017", "2018", "2019"],
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
                 data: [0, 15, 57, 12, 85, 10, 50],
-                label: "BALI  EXOTIC TOUR",
+                label: "PRODUK 1",
                 backgroundColor: '#847DFA',
                 borderColor: '#847DFA',
                 borderWidth: 0.5,
@@ -21,7 +21,7 @@
                 pointBorderColor: 'transparent',
                 pointBackgroundColor: '#847DFA',
             }, {
-                label: "BALI  CRUISE TOUR",
+                label: "PRODUK 2",
                 data: [0, 30, 5, 53, 15, 55, 0],
                 backgroundColor: '#F196B0',
                 borderColor: '#F196B0',
